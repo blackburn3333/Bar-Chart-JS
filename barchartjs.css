@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Fjalla One";
+    src: url(./fonts/Fjalla_One/FjallaOne-Regular.ttf) format('truetype');
+}
+
+.title{
+    margin-top: 0;
+}
+
+.barchartBase{
+    width: 100%;
+    font-family: "Fjalla One";
+    text-align: center;
+    margin-top: 0;
+}
+
+.bar_base{
+    float: left;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bar_outer{
+    margin-top:0;
+    position: relative;
+    height: 100%;
+    background-color: #d9d9db;
+
+}
+.bar_fill{
+    background-color: darkred;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes bar_height {
+    from {height: 0%;}
+    to   {height: 100%}
+}
+
+.label_div{
+    float: left;
+}
+
+
+.bar_fill .tooltiptext {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 5px 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 50%;
+    left: 50%;
+    margin-left: -15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.6em;
+}
+
+.bar_fill .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.bar_fill:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.y_label{
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 0.8em;
+}
+.x_label{
+    font-size: 0.8em;
+    width: 100%;
+}
+
+.label_bar{
+    font-size: 0.5em;
+}
